@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity3">
+
+    <TextView
+        android:id="@+id/tv11"
+        android:layout_width="131dp"
+        android:layout_height="49dp"
+        android:layout_marginTop="16dp"
+        android:text="TextView"
+        android:textAlignment="center"
+        app:autoSizeTextType="uniform"
+        app:layout_constraintEnd_toStartOf="@+id/imageView"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_marginStart="8dp"
+        app:layout_constraintStart_toEndOf="@+id/tv11"
+        app:layout_constraintTop_toTopOf="@+id/tv11" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintTop_toBottomOf="@+id/tv11">
+
+        <ImageButton
+            android:id="@+id/a"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:background="#4CAF50"
+            android:contentDescription="Buena"
+            android:onClick="seleccion"
+            android:textAlignment="textStart"
+            app:srcCompat="@android:drawable/btn_star_big_on" />
+
+        <ImageButton
+            android:id="@+id/c"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:background="#4CAF50"
+            android:contentDescription="Buena"
+            android:onClick="seleccion"
+            android:textAlignment="textStart"
+            app:srcCompat="@android:drawable/btn_star_big_on" />
+
+        <ImageButton
+            android:id="@+id/b"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:background="#4CAF50"
+            android:contentDescription="Buena"
+            android:onClick="seleccion"
+            android:textAlignment="textStart"
+            app:srcCompat="@android:drawable/btn_star_big_on" />
+        <!-- Agregar al LinearLayout existente -->
+
+        <EditText
+            android:id="@+id/etCantidad"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Cantidad a gastar"
+            android:inputType="number"
+            android:textSize="24sp" />
+
+        <EditText
+            android:id="@+id/etDescripcion"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Descripción"
+            android:textSize="24sp" />
+
+        <Button
+            android:id="@+id/btnGastar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Gastar"
+            android:onClick="gastar" />
+
+
+        <!-- Resto de los ImageButtons -->
+
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
